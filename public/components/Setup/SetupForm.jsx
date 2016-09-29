@@ -1,6 +1,6 @@
 import React from 'react';
 import { FormGroup, ControlLabel, FormControl, Button } from 'react-bootstrap';
-import Form from '../common/Form';
+import Form from '../Form';
 
 export default function SetupForm(props) {
     return (
@@ -18,12 +18,12 @@ export default function SetupForm(props) {
             </FormGroup>
 
             <FormGroup>
-                <ControlLabel>Username</ControlLabel>
+                <ControlLabel>Email</ControlLabel>
                 <FormControl
-                    name="username"
+                    name="email"
                     type="email"
-                    placeholder="Enter username"
-                    value={props.user.username}
+                    placeholder="Enter email"
+                    value={props.user.email}
                     onChange={props.onChange}
                     required
                 />
@@ -61,7 +61,7 @@ export default function SetupForm(props) {
 SetupForm.propTypes = {
     user: React.PropTypes.shape({
         name: React.PropTypes.string.isRequired,
-        username: React.PropTypes.string.isRequired,
+        email: React.PropTypes.string.isRequired,
         password: React.PropTypes.string.isRequired,
         confirmPassword: React.PropTypes.string.isRequired,
     }).isRequired,
